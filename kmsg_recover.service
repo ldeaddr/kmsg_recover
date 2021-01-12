@@ -1,0 +1,10 @@
+[Unit]
+Description=Kernel log recovery
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/kmsg_recover.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
